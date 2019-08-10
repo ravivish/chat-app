@@ -7,7 +7,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 input {
@@ -39,11 +39,13 @@ input {
 
 button {
     cursor: pointer;
-    padding: 12px;
+    /* padding: 12px; */
+    padding: 1rem;
     background: #7C5CBF;
     border: none;
+    border-radius: 0.8rem;
     color: white;
-    font-size: 16px;
+    font-size: 0.5rem;
     transition: background .3s ease;
 }
 
@@ -181,3 +183,41 @@ button:disabled {
     font-weight: 300;
     padding: 12px 24px 0 24px;
 }
+
+/* Media queries */
+
+
+@media only screen and (max-width: 600px) {
+    * {
+      font-size: 0.8rem;
+    }
+    button {
+        cursor: pointer;
+        padding: 0.5rem;
+        background: #7C5CBF;
+        border: none;
+        border-radius: 0.5rem;
+        color: white;
+        font-size: 0.1rem;
+        transition: background .3s ease;
+    }
+  }
+
+/* 
+@media only screen and (max-width: 750px) {
+    * {
+      font-size: 0.5rem;
+    }
+    button {
+        cursor: pointer;
+        padding: 0.5rem;
+        background: #7C5CBF;
+        border: none;
+        border-radius: 0.8rem;
+        color: white;
+        font-size: 0.5rem;
+        transition: background .3s ease;
+    }
+  }
+
+   */

@@ -122,3 +122,5 @@ io.on('connection',(socket)=>{
 server.listen(port,()=>{
         console.log('Server is up on port',port);
 });
+
+// git push heroku master on window command prompt
