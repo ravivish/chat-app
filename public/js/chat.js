@@ -58,7 +58,7 @@ const autoscroll = () => {
 
 
 socket.on('message',(msg) => {
-    console.log(msg);
+    // console.log(msg);
     const html = Mustache.render(messageTemplate,{
         username:msg.username,
         // message:msg
@@ -110,12 +110,12 @@ $messageForm.addEventListener('submit',(e)=>{
         $messageFormInput.focus();
 
         if(error){
-            return console.log(error);
+            // return console.log(error);
         }
 
         // console.log('This msg was deliverd',message);  // send feedback as 'This msg was deliverd' and receive as 'message' variable      
 
-        console.log('Message Deliverd!');
+        // console.log('Message Deliverd!');
     });  
 })
 
@@ -127,7 +127,7 @@ $locationButton.addEventListener('click',()=>{
     $locationButton.setAttribute('disabled','disabled');
 
     navigator.geolocation.getCurrentPosition((position)=>{
-        console.log(position);
+        // console.log(position);
 
         socket.emit('sendLocation',{
             latitude:position.coords.latitude,
@@ -135,7 +135,7 @@ $locationButton.addEventListener('click',()=>{
         },()=>{
             // enable the location send button
             $locationButton.removeAttribute('disabled');
-            console.log('Location Shared');// Feedback 
+            // console.log('Location Shared');// Feedback 
             
         })
     }) 
